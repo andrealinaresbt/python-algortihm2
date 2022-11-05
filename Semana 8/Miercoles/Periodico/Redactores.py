@@ -1,5 +1,5 @@
 import random
-from Articulo import Articulo
+from articulo import Articulo
 
 class Redactor:
     def __init__(self, nombre, ID):
@@ -7,6 +7,7 @@ class Redactor:
         self.ID = ID
         #self.seccion = seccion #como esto puede ser una clase, lo que le mando es un objeto.
         #no corre porque para seccion necesito un grupo de redactor
+
     def escribir(self):
         print('Estoy escribiendo un articulo')
         article = Articulo(
@@ -15,9 +16,9 @@ class Redactor:
         return article
         
 class JefeRedactor(Redactor): #hereda los metodos y atributos pero puede que no use los metodos
-    def __init__(self, nombre, ID, GrupoDeRedactores):
+    def __init__(self, nombre, ID, grupo):
         super().__init__(nombre, ID)
-        self.GrupoDeRedactores = GrupoDeRedactores
+        self.grupo_de_redactor = grupo
 
     def supervisar(self): #si esta dentro de una clase hay que agregar el self.
         print("Todo esta bien con los redactores")

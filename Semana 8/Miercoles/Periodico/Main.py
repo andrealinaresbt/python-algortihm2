@@ -1,5 +1,5 @@
-from Redactores import Redactor, JefeRedactor
-from Seccion import Seccion
+from redactores import Redactor, JefeRedactor
+from seccion import Seccion
 
 def get_redactores_deportes():
     return [
@@ -22,9 +22,13 @@ def get_redactores_entretenimiento():
     Redactor("Erika", 37483929),
     Redactor("Julia", 85093828)]
 
-def procesar_articulo():
-    for escritor in Seccion.JefeRedactor.
-    pass
+def procesar_articulo(seccion):
+    for escritor in Seccion.jefe_redactor.grupo_de_redactor:
+        print("El escritor al mando en este momento es",escritor.nombre)
+        articulo = escritor.escribir_articulo()
+        print("El jefe que va a decidir es",Seccion.JefeRedactor.nombre)
+        Seccion.JefeRedactor.decidir(articulo)
+      
 
 def main():
     
@@ -41,5 +45,5 @@ def main():
     procesar_articulo(seccion_entretenimiento)
     procesar_articulo(seccion_farandula)
     procesar_articulo(seccion_deportes)
-
+    print('hello')
 main()
