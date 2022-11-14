@@ -1,4 +1,4 @@
-from redactores import Redactor, JefeRedactor
+from redactor import Redactor, JefeRedactor
 from seccion import Seccion
 
 def get_redactores_deportes():
@@ -22,12 +22,12 @@ def get_redactores_entretenimiento():
     Redactor("Erika", 37483929),
     Redactor("Julia", 85093828)]
 
-def procesar_articulo(seccion):
+def procesar_articulo(Seccion):
     for escritor in Seccion.jefe_redactor.grupo_de_redactor:
         print("El escritor al mando en este momento es",escritor.nombre)
         articulo = escritor.escribir_articulo()
-        print("El jefe que va a decidir es",Seccion.JefeRedactor.nombre)
-        Seccion.JefeRedactor.decidir(articulo)
+        print("El jefe que va a decidir es",Seccion.jefe_redactor.nombre)
+        Seccion.jefe_redactor.decidir(articulo)
       
 
 def main():

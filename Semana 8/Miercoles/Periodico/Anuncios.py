@@ -1,28 +1,28 @@
-class AnunciosComercial:
-    def __init__(self, imagen, seccion):
-        self.imagen = imagen
+class AnuncioComercial:
+    def __init__(self,imagen,seccion):
         self.seccion = seccion
+        self.imagen = imagen
 
-class AnuncioClasificado:
-    def __init__(self, precio, fechaPUB, cantidad_dias, tipo):
+
+class AnuncioClasificados:
+    def __init__(self,precio,fecha_publicacion,dias,tipo):
         self.precio = precio
-        self.fechaPUB = fechaPUB
-        self.cantidad_dias = cantidad_dias
+        self.fecha_de_publicacion = fecha_publicacion
+        self.cantidad_de_dias = dias
         self.tipo = tipo
 
-class AnuncioVehiculo(AnuncioClasificado):
-    def __init__(self, precio, fechaPUB, cantidad_dias, marca, modelo, ano):
-        super().__init__(precio, fechaPUB, cantidad_dias, "Vehiculo")
-        self.marca = marca
+class AnuncioVehiculo(AnuncioClasificados):
+    def __init__(self, precio, fecha_publicacion, dias, marca, modelo, año):
+        super().__init__(precio, fecha_publicacion, dias, "Vehiculo")
+        self.marca = marca 
         self.modelo = modelo
-        self.ano = ano
-        
-class AnuncioVivienda(AnuncioClasificado):
-    def __init__(self, precio, fechaPUB, cantidad_dias, metros, cuartos, banos, puestos, politicas):
-        super().__init__(precio, fechaPUB, cantidad_dias, "Vivienda")
-        self.metros = metros
+        self.año = año
+
+class AnuncioVivienda(AnuncioClasificados):
+    def __init__(self, precio, fecha_publicacion, dias,m2,cuartos,baños,puestos,politicas):
+        super().__init__(precio, fecha_publicacion, dias, "Vivienda")
+        self.m2 = m2
         self.cuartos = cuartos
-        self.banos = banos
+        self.baños = baños
         self.puestos = puestos
-        self.acepta_politicas = politicas
-        
+        self.acepta_politica = politicas

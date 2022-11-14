@@ -1,6 +1,6 @@
 class Imagen:
-    def __init__(self, nombre, ID_persona, titulo, cuerpo):
+    def __init__(self,nombre,cedula,seccion,titulo,cuerpo):
         self.nombre = nombre
-        self.ID = ID_persona 
+        self.cedula = cedula
         self.titulo = titulo
         self.cuerpo = cuerpo
